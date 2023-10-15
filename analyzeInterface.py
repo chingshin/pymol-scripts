@@ -14,7 +14,7 @@ interaction map with BSA annotations, and all electrostatic interactions. 2)
 pymol objects that renders BSA calculation (default: percentage of buried) on 
 surface and electrostatic interaction network.
 
-Author: chingshin, 2023/02/24
+Author: chingshin, 2023/10/15
 """
 from pymol import cmd
 from pymol import util
