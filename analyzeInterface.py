@@ -176,7 +176,7 @@ def calculateBSA(wholeComplex, ligand, receptor, cutoff=5.0, includeSharedWaters
         cmd.flag("ignore", "not tempCplx")
         boundASA = cmd.get_area(f"tempCplx and chain {ligSel[0]} and resi {ligSel[1]}")
         BSA = unboundASA - boundASA
-        pctBuried = 100*BSA/unboundASA
+        pctBuried = 100*BSA/unboundASA if unboundASA > 0 else 0
         totalRecBSA = 0
         recBsaList = []
         for recRes in stored.interDict[ligSel]:
