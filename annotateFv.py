@@ -205,7 +205,7 @@ def annotateFv(selection, scheme):
     obj.retrieve()
     obj.analyze(obj.abnum, obj.scheme)
     for i in obj.regions.keys():
-        cmd.select(i, f"pepseq {obj.regions[i]}")
+        cmd.select(i, f"pepseq {obj.regions[i]} and {selection}")
     cmd.deselect()
     print(f"Annotation in {obj.scheme} scheme:")
     for region, aa in obj.regions.items():
