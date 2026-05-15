@@ -288,8 +288,8 @@ def analyzeInterface(wholeComplexObj, ligand, receptor, cutoff=5.0, contactDista
     print(wholeComplexObj, ligand, receptor, cutoff, includeSharedWaters)
     
     #make selections for the analysis
-    sel1 = f"(not hetatm and not solvent and {ligand} and {wholeComplexObj})"
-    sel2 = f"(not hetatm and not solvent and {receptor} and {wholeComplexObj})"
+    sel1 = f"(not solvent and {ligand} and {wholeComplexObj})"
+    sel2 = f"(not solvent and {receptor} and {wholeComplexObj})"
     quickWat = f"((solvent within 3.5 of {sel1}) and (solvent within 3.5 of {sel2}) and {wholeComplexObj})"
     
     #select the residues that will be included in calculation
